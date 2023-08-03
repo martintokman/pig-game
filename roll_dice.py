@@ -3,8 +3,8 @@ import random, os
 
 
 
-def roll_dice():
-    global_score = 0
+def roll_dice(global_scores, count):
+    global_score = global_scores[count]
     threshold = 20
     while True:
         
@@ -18,7 +18,7 @@ def roll_dice():
             
             if dice > 1:
                 global_score += dice
-                print(f"Your global score is: {global_score}")
+                print(f"Your global score is: {global_score}\n")
                 if global_score >= threshold:
                     global_score = 1111 #winner code
                     break
