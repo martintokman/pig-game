@@ -5,7 +5,7 @@ import random, os
 
 def roll_dice():
     global_score = 0
-    
+    threshold = 20
     while True:
         
         roll_dice = input("Roll dice? (y/n): ")
@@ -19,7 +19,11 @@ def roll_dice():
             if dice > 1:
                 global_score += dice
                 print(f"Your global score is: {global_score}")
-                continue
+                if global_score >= threshold:
+                    global_score = 1111 #winner code
+                    break
+                else:
+                    continue
         
         elif roll_dice == "N":
                 break
