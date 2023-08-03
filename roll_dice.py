@@ -8,8 +8,13 @@ def roll_dice(global_scores, count):
     threshold = 20
     while True:
         
-        roll_dice = input("Roll dice? (y/n): ")
-        roll_dice = roll_dice.capitalize()
+        while True:
+            roll_dice = input("Roll dice? (y/n): ")
+            roll_dice = roll_dice.capitalize()
+            if roll_dice != "Y" and roll_dice !="N":
+                 print("Invalid option, try again.")
+            else:
+                 break
         
         if roll_dice == "Y":
             
@@ -30,7 +35,7 @@ def roll_dice(global_scores, count):
             
             
         if dice == 1:
-                print("You loose all your score.")
+                print("Your global score is 0")
                 global_score = 99
                 
                 break
