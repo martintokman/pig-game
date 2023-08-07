@@ -1,6 +1,7 @@
 import random, os
 
 def roll_dice(global_scores, count):
+    
     """Recieves the list of global scores and the number of the current player.
        Allow the player to roll dice until a winner is set, dice is 0 or 
        the player doesn't want to roll again. 
@@ -12,7 +13,7 @@ def roll_dice(global_scores, count):
     Returns:
         global_scores: Updated list of global scores for all players
     """
-    
+
     global_score = global_scores[count]
     threshold = 10
     
